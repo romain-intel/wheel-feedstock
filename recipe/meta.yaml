@@ -10,7 +10,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -c "import flit_core.buildapi; flit_core.buildapi.build_wheel('.')" && {{ PYTHON }} -m installer --no-compile-bytecode wheel-*.whl
   entry_points:
     - wheel = wheel.cli:main
